@@ -4,7 +4,11 @@ var palindromCheck = prompt("Inserisci una parola").toLowerCase()
 // Inizializzo la variabile che mi servirà nel ciclo for per creare la parola palindroma
 var invertedWord = "";
 
-verificoParolaPalindroma(palindromCheck);
+if(verificoParolaPalindroma(palindromCheck)) {
+    alert("La tua parola è palindroma")
+} else {
+    alert("la tua parola NON è palindroma")
+}
 
 // funzione che verifica la palindromicità di una parola 
 function verificoParolaPalindroma(parola) {
@@ -17,12 +21,14 @@ function verificoParolaPalindroma(parola) {
 
     // Ora devo comparare le due parole parola e InvertedWord per dire se sono palindrome
     if(parola === invertedWord) {
-        return console.log("La parola da te inserita è palindroma")
+        return true
 
     } else {
-        console.log("La parola da te inserita NON è palindroma")
+        return false
     }
 }
+
+
 
 
 
